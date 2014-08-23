@@ -28,4 +28,4 @@ else
 fi
 
 echo "Starting OpenLDAP"
-exec slapd -h "ldap:/// ldapi:///" -u openldap -g openldap ${LDAP_OPTS:-} -d ${LDAP_DEBUG:-"Trace"}
+slapd -h "ldap:/// ldapi:///" -u openldap -g openldap ${LDAP_OPTS:-} -d ${LDAP_DEBUG:-"Trace"}
