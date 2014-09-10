@@ -12,4 +12,5 @@ VOLUME ["/etc/ldap", "/var/lib/ldap", "/run/slapd"]
 
 ADD start.sh /usr/local/bin/start
 
-CMD start
+ENTRYPOINT ["slapd"]
+CMD ["-h", "ldap:/// ldapi:///", "-u", "openldap", "-g", "openldap", "-d0"]
